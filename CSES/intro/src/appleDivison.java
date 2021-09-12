@@ -11,19 +11,20 @@ public class appleDivison {
             qArr[i] = r.nextLong();
             sum+= qArr[i];
         }
-        Arrays.sort(qArr);
-        long halfSum = sum/2;
-        long leftcount =0;
-        long rightcount =0;
-        for(int i=n-1;i>=0;i--){
-            if(halfSum >= leftcount+qArr[i]){
-                leftcount += qArr[i];
+        int pow2 = (int) Math.pow(2,n);
+        long ans = Integer.MAX_VALUE;
+        for(int i=0;i<pow2;i++){
+            long temp =0;
+            for (int j=0;j<n;j++){
+                if ((i & 1<<j) == 1){
+                    temp += qArr[i];
+                }
             }
-            else {
-                rightcount += qArr[i];
-            }
+            long current = Math.abs((sum-temp)-temp);
+            ans = Math.min(ans,current);
         }
-        System.out.println(rightcount-leftcount);
+        System.out.println(ans);
+
     }
 }
 
