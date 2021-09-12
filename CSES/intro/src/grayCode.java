@@ -1,26 +1,43 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.SplittableRandom;
 
-public class grayCode {
+class grayCode {
     public static void main(String[] args) throws IOException {
         Reader r= new Reader();
         int n = r.nextInt();
-        System.out.println(intToBinary(n));
-    }
-    public static StringBuilder intToBinary(int n){
-        StringBuilder answer = new StringBuilder();
-        int powOf2 = (int) Math.pow(2,n);
-        for(int i=0;i<powOf2;i++){
-            StringBuilder tempStr = new StringBuilder();
-            int tempInt = i;
-            for(int j=0;j<n;j++){
-                tempStr.append(tempInt%2);
-                tempInt /=2;
-            }
-            answer.append(tempStr.reverse());
-            answer.append("\n");
+        ArrayList<String> ans = GrayCode(n);
+        StringBuilder str1 = new StringBuilder("");
+        for(int i=0;i< ans.size();i++){
+            String temp = ans.get(i);
+            str1.append(temp);
+            str1.append("\n");
         }
-        return answer;
+        System.out.println(str1);
     }
+
+    static ArrayList<String> GrayCode(int n){
+        if(n==1){
+            ArrayList<String> temp1 = new ArrayList<>();
+            temp1.add("0");
+            temp1.add("1");
+            return temp1;
+        }
+        ArrayList<String> previousResult = GrayCode(n-1);
+        ArrayList<String> thisResult = new ArrayList<>();
+        for(int i=0;i<previousResult.size();i++){
+            String temp = previousResult.get(i);
+            thisResult.add("0"+temp);
+        }
+        for(int i= previousResult.size()-1;i>=0;i--){
+            String temp = previousResult.get(i);
+            thisResult.add("1"+temp);
+        }
+        return thisResult;
+    }
+
 }
+
+
 
 
