@@ -1,3 +1,5 @@
+import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -10,21 +12,21 @@ public class MissingCoinSum {
             coinsSum[i] = rdr.nextInt();
         }
         Arrays.sort(coinsSum);
-        int count=1;
-        int index = 1;
-        int tempSum = coinsSum[0];
-        int ans = -1;
-        while (true){
-            if(tempSum==count){
-                count++;
-                tempSum += coinsSum[index++];
-            }
-            else {
-                ans = count;
+        long ans=1;
+        for(int i=0;i<n;i++){
+            if(ans<coinsSum[i]){
+                System.out.println(ans);
                 break;
             }
-
+            else {
+                ans += coinsSum[i];
+            }
+            if(i==n-1){
+                System.out.println(ans);
+            }
         }
-        System.out.println(ans);
+
     }
 }
+
+

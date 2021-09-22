@@ -18,7 +18,7 @@ public class collectingNumbers {
         for(int i=0;i<n;i++){
             if(i==n-1){
                 rounds++;
-            }
+        }
             else if(arr.get(i).index>arr.get(i+1).index){
                 rounds++;
             }
