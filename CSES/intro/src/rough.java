@@ -1,27 +1,39 @@
 import java.util.*;
+import java.util.function.ToIntFunction;
 
-public class rough {
-//    public static void main(String[] args) {
-//        String str = "Now is the time for all men to come to improve our country";
-//        int i=0;
-//        while(true){
-//            int first = str.indexOf("Now",i);
-//            if(first == -1)
-//                break;
-//            int start = first +3;
-//            int end = str.lastIndexOf(" ",start);
-//            System.out.println(end);
-//            i = end+1;
-//        }
-//    }
-public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int seconds = sc.nextInt();
-    int hours = seconds/3600;
-    int minutes = seconds/60;
-    minutes %= 60;
-    seconds%= 60;
-    System.out.println(hours+":"+minutes+":"+seconds);
+class rough{
+    public static void main(String[] args) {
+        ArrayList<rand1> arr =new ArrayList<>();
+        arr.add(new rand1(1,2));
+        arr.add(new rand1(1,1));
+        arr.add(new rand1(1,5));
+        arr.add(new rand1(1,3));
+        custcomp c1 = new custcomp();
+        Collections.sort(arr,c1);
+        for(rand1 temp : arr){
+            System.out.println(temp.i2);
+        }
+    }
+}
+class rand1{
+    int i1;
+    int i2;
+
+    public rand1(int i1, int i2) {
+        this.i1 = i1;
+        this.i2 = i2;
+    }
 }
 
+class custcomp implements Comparator<rand1>{
+    @Override
+    public int compare(rand1 o1, rand1 o2) {
+        if(o1.i1> o2.i1){
+            return 1;
+        }
+        if(o1.i1== o2.i1 && o1.i2> o2.i2){
+            return 1;
+        }
+        return -1;
+    }
 }
