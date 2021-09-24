@@ -1,8 +1,5 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class nestedRangesCheck {
     public static void main(String[] args) throws IOException {
@@ -73,7 +70,7 @@ class custComparator implements Comparator<range>{
         if(o1.start> o2.start){
             return 1;
         }
-        if(o1.start== o2.start && o1.end> o2.end){
+        if(o1.start== o2.start && o1.end< o2.end){
             return 1;
         }
         return -1;
@@ -81,4 +78,6 @@ class custComparator implements Comparator<range>{
 
 
 }
+
+
 
