@@ -33,7 +33,6 @@ typedef vector<pii> vpii;
  
 int main() { 
     ios_base::sync_with_stdio(0); 
-    cout<<"hello world\n";
-    cout<<2;
+    
     return 0; 
 } 
