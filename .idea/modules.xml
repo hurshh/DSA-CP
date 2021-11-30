@@ -5,13 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/CSES/CSES.iml" filepath="$PROJECT_DIR$/CSES/CSES.iml" />
       <module fileurl="file://$PROJECT_DIR$/CSES_sorting&amp;searching.iml" filepath="$PROJECT_DIR$/CSES_sorting&amp;searching.iml" />
       <module fileurl="file://$PROJECT_DIR$/DP/DP.iml" filepath="$PROJECT_DIR$/DP/DP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA.iml" filepath="$PROJECT_DIR$/DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/DSA_GRIND.iml" filepath="$PROJECT_DIR$/DSA_GRIND.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algebra/algebra.iml" filepath="$PROJECT_DIR$/algebra/algebra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStructures.iml" filepath="$PROJECT_DIR$/DataStructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/codeChef/codeChef.iml" filepath="$PROJECT_DIR$/codeChef/codeChef.iml" />
       <module fileurl="file://$PROJECT_DIR$/codeforces/codeforces.iml" filepath="$PROJECT_DIR$/codeforces/codeforces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/practice_problems/practice_problems.iml" filepath="$PROJECT_DIR$/practice_problems/practice_problems.iml" />
       <module fileurl="file://$PROJECT_DIR$/recursion/recursion.iml" filepath="$PROJECT_DIR$/recursion/recursion.iml" />
-      <module fileurl="file://$PROJECT_DIR$/usefull/usefull.iml" filepath="$PROJECT_DIR$/usefull/usefull.iml" />
     </modules>
   </component>
 </project>
